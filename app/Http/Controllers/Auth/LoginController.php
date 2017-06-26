@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,4 +36,27 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+
+    public function login(Request $request){
+        if(!empty($request->username && $request->password)){
+            if(Auth::attempt($request->only('username' , 'password'))){
+                Auth::user()->update(['active' => 1]);
+                return redirect('/');
+            }
+            else{
+
+                return redirect()->back()->withErrors('Invalid email or password');
+            }
+
+        }else{
+            return redirect()->back()->withErrors('Empty email or password');   
+        }
+    }
+
+    
 }
