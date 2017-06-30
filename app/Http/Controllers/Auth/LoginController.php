@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -18,7 +19,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    //use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
@@ -45,7 +46,6 @@ class LoginController extends Controller
     public function login(Request $request){
         if(!empty($request->username && $request->password)){
             if(Auth::attempt($request->only('username' , 'password'))){
-                Auth::user()->update(['active' => 1]);
                 return redirect('/');
             }
             else{
@@ -56,6 +56,11 @@ class LoginController extends Controller
         }else{
             return redirect()->back()->withErrors('Empty email or password');   
         }
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
     }
 
     

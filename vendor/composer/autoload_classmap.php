@@ -77,6 +77,8 @@ return array(
     'Dotenv\\Exception\\ValidationException' => $vendorDir . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
     'Dotenv\\Loader' => $vendorDir . '/vlucas/phpdotenv/src/Loader.php',
     'Dotenv\\Validator' => $vendorDir . '/vlucas/phpdotenv/src/Validator.php',
+    'EditUsersRoleTable' => $baseDir . '/database/migrations/2017_06_30_120923_edit_users_role_table.php',
+    'EditUsersTable' => $baseDir . '/database/migrations/2017_06_30_104018_edit_users_table.php',
     'Faker\\Calculator\\Iban' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
     'Faker\\Calculator\\Luhn' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Luhn.php',
     'Faker\\DefaultGenerator' => $vendorDir . '/fzaninotto/faker/src/Faker/DefaultGenerator.php',

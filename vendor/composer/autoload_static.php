@@ -343,6 +343,8 @@ class ComposerStaticInit3408aaaf395fdc442fe8865fd9ead784
         'Dotenv\\Exception\\ValidationException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
         'Dotenv\\Loader' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Loader.php',
         'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
+        'EditUsersRoleTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_30_120923_edit_users_role_table.php',
+        'EditUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_30_104018_edit_users_table.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Luhn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Luhn.php',
         'Faker\\DefaultGenerator' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/DefaultGenerator.php',
