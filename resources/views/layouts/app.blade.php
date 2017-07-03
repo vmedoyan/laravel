@@ -26,6 +26,8 @@
     <div style="width:100%;height:90%;float:left">
         <div style="width:20%; height:100%; float:left; border-right: 1px solid black">
             <h3>Menu</h3>
+            <p><a href="/subgroups">SubGroups</a></p>
+            <p><a href="/permission">Permission</a></p>
         </div>
         <div style="width:80%; height:100%; float:left">
             @yield('content')

@@ -23,3 +23,11 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::post('/user/save', 'HomeController@user_save');
+
+Route::get('/subgroups', 'HomeController@subgroups');
+
+Route::get('/permission', 'HomeController@permission');
+
+Route::get('/permission/attach/', 'HomeController@attach');
+
+Route::get('/permission/detach/', 'HomeController@detach');
